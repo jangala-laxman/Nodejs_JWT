@@ -1,10 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const User = require('./models/user')
-const Article = require('./models/article')
-const verifytoken = require('./config/verifyUser')
 const router = require('./router/index')
-const userControllers = require('./controllers/index')
 
 require('dotenv').config()
 const app = express()

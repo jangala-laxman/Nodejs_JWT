@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const verifytoken = require('./config/verifyUser')
-const userControllers = require('./controllers/index')
+const verifytoken = require('../config/verifyUser')
+const userControllers = require('../controllers/index')
 
 
 router.post('/signup', userControllers.signUp )
