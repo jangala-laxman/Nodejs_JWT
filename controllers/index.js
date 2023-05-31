@@ -65,9 +65,9 @@ const signIn =  async(req, res)=>{
     if(user){
         
         if(await user.validatePassword(req.body.password)){
-            const token = jwt.sign({user: user._id, email:req.body.email}, process.env.JWT_SECRET_KEY, { expiresIn:60*1000})
+            const token = jwt.sign({user: user._id, email:req.body.email}, process.env.JWT_SECRET_KEY, { expiresIn:10*60*1000})
             console.log(token)
-            res.cookie("token", token, {maxAge:60*1000})
+            res.cookie("token", token, {maxAge:10*60*1000})
             res.json({
                 status:"200",
                 data:{user, token},
