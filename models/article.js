@@ -11,7 +11,7 @@ const articleSchema = new mongoose.Schema({
     },
     user:{
         type:mongoose.Schema.Types.ObjectID,
-        ref:'user'
+        ref:'users'
     }
 })
 
